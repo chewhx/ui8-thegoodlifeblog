@@ -1,38 +1,176 @@
-.App {
+section {
+  width: 100%;
+  margin: 0px auto;
+}
+
+@use '../textstyle';
+.card-lg {
+  height: 874px;
+  width: 633px;
+  display: grid;
+  grid-template-rows: repeat 4, auto;
+  justify-content: center;
+}
+
+.card-lg .card-title {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 24px;
+  color: #3b3d40;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-lg .card-image {
+  width: 100%;
+  height: 633px;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card-md {
+  height: 732px;
+  width: 460px;
+  display: grid;
+  grid-template-rows: repeat 4, auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-md .card-title {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 24px;
+  color: #3b3d40;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-md .card-image {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
 }
+
+.card-sm {
+  height: 627px;
+  width: 286px;
+  display: grid;
+  grid-template-rows: repeat 4, auto;
+  justify-content: center;
+}
+
+.card-sm .card-title {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 24px;
+  color: #3b3d40;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-sm .card-image {
+  width: 100%;
+  height: 286px;
+  object-fit: cover;
+}
+
+.card-sm .card-body {
+  font-family: "Source Serif Pro";
+  font-size: 18px;
+  font-weight: 400;
+  color: #7d7d7d;
+  line-height: 32px;
+  text-align: center;
+  overflow: hidden;
+  height: 165px;
+  line-height: 33px;
+  width: 100%;
+}
+
+.card-body {
+  font-family: "Source Serif Pro";
+  font-size: 18px;
+  font-weight: 400;
+  color: #7d7d7d;
+  line-height: 32px;
+  text-align: center;
+  overflow: hidden;
+  height: 96px;
+  line-height: 33px;
+  width: 100%;
+}
+
+.card-footer {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  color: #a78f79;
+  color: #b7a698;
+  line-height: 18px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@use '../textstyle';
+nav {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 48px auto 0px;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  color: #a78f79;
+  line-height: 20px;
+}
+
+nav ul li {
+  margin: auto;
+  display: inline-block;
+  margin: auto 30px;
+}
+
+footer {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  color: #a78f79;
+  line-height: 20px;
+}
+
+footer ul li {
+  margin: auto;
+  display: inline-block;
+  margin: auto 30px;
+}
+
+footer .wrapper {
+  width: 15%;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+/*# sourceMappingURL=App.css.map */

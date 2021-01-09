@@ -1,0 +1,24 @@
+@use '../textstyle';
+
+nav {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 48px auto 0px;
+    position: sticky;
+    top: 0;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include navigation;
+
+        li {
+            margin: auto;
+            display: inline-block;
+            margin: auto 30px;
+        }
+    }
+}
