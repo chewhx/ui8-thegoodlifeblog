@@ -26,7 +26,8 @@
     font-family: $font-body-serif;
     font-weight: $font-regular;
     font-size: 20px;
-    color: $secondary-color
+    color: $secondary-color;
+    line-height: 50px;
 }
 
 @mixin link-text {
@@ -34,6 +35,7 @@
     font-weight: $font-regular;
     font-size: 18px;
     color: $lightbrown-shade;
+    line-height: 40px;
 }
 
 @mixin navigation {

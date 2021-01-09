@@ -1,0 +1,16 @@
+@use '../textstyle';
+
+.tag {
+    @include navigation;
+    width: fit-content;
+    height: 17px;
+    border: 1px solid $lightbrown-shade;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: $font-bold;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 0px 9px;
+    margin-right: 8px;
+}

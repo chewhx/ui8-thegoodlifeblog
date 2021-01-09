@@ -1,0 +1,24 @@
+#feature {
+
+    .container {
+        justify-content: space-evenly;
+    }
+
+}
+.post-image {
+    width: 633px;
+    object-fit: cover;
+}
+
+#post {
+
+    .container {
+        margin-left: 10%;
+        width: 633px;
+        justify-content: flex-start;
+    
+        @media screen and (orientation: portrait) {
+            width: 80%;
+        }
+    }
+}

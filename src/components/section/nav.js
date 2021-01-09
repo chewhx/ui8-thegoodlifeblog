@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 import brand from '../../assets/logos/brand.svg'
 
 const Nav = (props) => {
     return (
-        <section>
+        <section id="nav">
             <nav>
                 <ul>
                     <li>About</li>

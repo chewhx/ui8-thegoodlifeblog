@@ -1,0 +1,8 @@
+@use '../textstyle';
+@use '../config';
+
+.ingredient-item {
+    @include ingredients;
+
+
+}

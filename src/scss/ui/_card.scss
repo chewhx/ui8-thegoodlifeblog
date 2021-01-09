@@ -1,90 +1,79 @@
 @use '../textstyle';
 
-.card-lg {
-    height: 874px;
-    width: 633px;
+.card {
+    width: 100%;
     display: grid;
-    grid-template-rows: repeat (4, auto);
     justify-content: center;
+    margin: 0 30px;
 
-    .card-title {
+    &-title {
         @include title-text;
-        width: 100%;
         margin: 0 auto;
         text-align: center;
     }
 
-    .card-image {
+    &-image {
         width: 100%;
-        height: 633px;
+        height: 100%;
         object-fit: cover;
+    }
+
+    &-body {
+        @include description-text-big-box;
+        text-align: center;
+        overflow: hidden;
+        height: 96px;
+        line-height: 33px;
+    }
+
+    &-footer {
+        @include date-text;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
+
+
+.card-lg {
+    height: 874px;
+    max-width: 633px;
+
+    .card-title {
+        width: 100%;
+    }
+
+    .card-image {
+        height: 633px;
     }
 }
 
 .card-md {
     height: 732px;
     width: 460px;
-    display: grid;
-    grid-template-rows: repeat (4, auto);
-    justify-content: center;
 
     .card-title {
-        @include title-text;
         width: 50%;
-        margin: 0 auto;
-        text-align: center;
     }
 
     .card-image {
-        width: 100%;
         height: 460px;
-        object-fit: cover;
     }
 }
 
 .card-sm {
     height: 627px;
     width: 286px;
-    display: grid;
-    grid-template-rows: repeat (4, auto);
-    justify-content: center;
 
     .card-title {
-        @include title-text;
         width: 100%;
-        margin: 0 auto;
-        text-align: center;
     }
 
     .card-image {
-        width: 100%;
         height: 286px;
-        object-fit: cover;
     }
 
     .card-body {
-        @include description-text-big-box;
-        text-align: center;
-        overflow: hidden;
         height: 165px;
-        line-height: 33px;
-        width: 100%;
     }
-}
-
-
-
-.card-body {
-    @include description-text-big-box;
-    text-align: center;
-    overflow: hidden;
-    height: 96px;
-    line-height: 33px;
-    width: 100%;
-}
-
-.card-footer {
-    @include date-text;
-    margin: 0 auto;
-    text-align: center;
 }

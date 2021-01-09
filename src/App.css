@@ -3,125 +3,30 @@ section {
   margin: 0px auto;
 }
 
-@use '../textstyle';
-.card-lg {
-  height: 874px;
-  width: 633px;
-  display: grid;
-  grid-template-rows: repeat 4, auto;
+.container {
+  max-width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-}
-
-.card-lg .card-title {
-  font-family: "PT Serif";
-  font-weight: 700;
-  font-size: 24px;
-  color: #3b3d40;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.card-lg .card-image {
-  width: 100%;
-  height: 633px;
-  object-fit: cover;
-}
-
-.card-md {
-  height: 732px;
-  width: 460px;
-  display: grid;
-  grid-template-rows: repeat 4, auto;
-  justify-content: center;
-}
-
-.card-md .card-title {
-  font-family: "PT Serif";
-  font-weight: 700;
-  font-size: 24px;
-  color: #3b3d40;
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.card-md .card-image {
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-}
-
-.card-sm {
-  height: 627px;
-  width: 286px;
-  display: grid;
-  grid-template-rows: repeat 4, auto;
-  justify-content: center;
-}
-
-.card-sm .card-title {
-  font-family: "PT Serif";
-  font-weight: 700;
-  font-size: 24px;
-  color: #3b3d40;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.card-sm .card-image {
-  width: 100%;
-  height: 286px;
-  object-fit: cover;
-}
-
-.card-sm .card-body {
-  font-family: "Source Serif Pro";
-  font-size: 18px;
-  font-weight: 400;
-  color: #7d7d7d;
-  line-height: 32px;
-  text-align: center;
-  overflow: hidden;
-  height: 165px;
-  line-height: 33px;
-  width: 100%;
-}
-
-.card-body {
-  font-family: "Source Serif Pro";
-  font-size: 18px;
-  font-weight: 400;
-  color: #7d7d7d;
-  line-height: 32px;
-  text-align: center;
-  overflow: hidden;
-  height: 96px;
-  line-height: 33px;
-  width: 100%;
-}
-
-.card-footer {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-size: 14px;
-  color: #a78f79;
-  color: #b7a698;
-  line-height: 18px;
-  margin: 0 auto;
-  text-align: center;
+  margin: 0px auto;
 }
 
 @use '../textstyle';
+#nav {
+  position: sticky;
+  top: 0;
+  padding: 48px 0px;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
 nav {
   width: 100%;
   max-width: 1240px;
   display: flex;
   justify-content: space-evenly;
-  margin: 48px auto 0px;
-  position: sticky;
-  top: 0;
+  margin: 0 auto;
 }
 
 nav ul {
@@ -149,6 +54,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 30px 0;
+  position: absolute;
+  background-color: #fff;
 }
 
 footer ul {
@@ -172,5 +80,233 @@ footer .wrapper {
   width: 15%;
   display: inline-flex;
   justify-content: space-evenly;
+}
+
+@use '../textstyle';
+.post {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 33px 65px auto 56px auto 64px 160px 18px;
+}
+
+.post-tags {
+  display: flex;
+  justify-content: flex-start;
+  grid-row: 1/2;
+}
+
+.post-title {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 26px;
+  color: #3b3d40;
+  grid-row: 2/3;
+}
+
+.post-description {
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-size: 20px;
+  color: #7d7d7d;
+  line-height: 35px;
+}
+
+.post-label {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 20px;
+  color: #3b3d40;
+}
+
+.post-ingredients {
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-size: 20px;
+  color: #7d7d7d;
+  line-height: 50px;
+  grid-row: 5/6;
+}
+
+.post ul {
+  padding: 0;
+  padding-left: 48px;
+  margin-left: 21px;
+  border-left: 2px solid #b7a698;
+}
+
+.post-footer {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  color: #a78f79;
+  color: #b7a698;
+  line-height: 18px;
+}
+
+@use '../textstyle';
+.card {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  margin: 0 30px;
+}
+
+.card-title {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 24px;
+  color: #3b3d40;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  font-family: "Source Serif Pro";
+  font-size: 18px;
+  font-weight: 400;
+  color: #7d7d7d;
+  line-height: 32px;
+  text-align: center;
+  overflow: hidden;
+  height: 96px;
+  line-height: 33px;
+}
+
+.card-footer {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  color: #a78f79;
+  color: #b7a698;
+  line-height: 18px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-lg {
+  height: 874px;
+  max-width: 633px;
+}
+
+.card-lg .card-title {
+  width: 100%;
+}
+
+.card-lg .card-image {
+  height: 633px;
+}
+
+.card-md {
+  height: 732px;
+  width: 460px;
+}
+
+.card-md .card-title {
+  width: 50%;
+}
+
+.card-md .card-image {
+  height: 460px;
+}
+
+.card-sm {
+  height: 627px;
+  width: 286px;
+}
+
+.card-sm .card-title {
+  width: 100%;
+}
+
+.card-sm .card-image {
+  height: 286px;
+}
+
+.card-sm .card-body {
+  height: 165px;
+}
+
+@use '../textstyle';
+.tag {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  color: #a78f79;
+  line-height: 20px;
+  width: fit-content;
+  height: 17px;
+  border: 1px solid #b7a698;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 0px 9px;
+  margin-right: 8px;
+}
+
+@use '../textstyle';
+.modal {
+  border: 1px solid #C6C6C6;
+  text-align: center;
+  width: 286px;
+  height: 634px;
+  padding: 33px 0px 0px;
+}
+
+.modal-title {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 24px;
+  color: #3b3d40;
+}
+
+.modal ul {
+  list-style: none;
+  margin-top: 34px;
+  padding: 0px;
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-size: 18px;
+  color: #b7a698;
+  line-height: 40px;
+}
+
+@use '../textstyle';
+@use '../config';
+.ingredient-item {
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-size: 20px;
+  color: #7d7d7d;
+  line-height: 50px;
+}
+
+#feature .container {
+  justify-content: space-evenly;
+}
+
+.post-image {
+  width: 633px;
+  object-fit: cover;
+}
+
+#post .container {
+  margin-left: 10%;
+  width: 633px;
+  justify-content: flex-start;
+}
+
+@media screen and (orientation: portrait) {
+  #post .container {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=App.css.map */

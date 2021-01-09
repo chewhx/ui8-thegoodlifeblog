@@ -1,0 +1,43 @@
+@use '../textstyle';
+
+.post {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 33px 65px auto 56px auto 64px 160px 18px;
+
+    &-tags {
+        display: flex;
+        justify-content: flex-start;
+        grid-row: 1/2;
+    }
+
+    &-title {
+        @include post-title;
+        grid-row: 2/3;
+    }
+
+    &-description {
+        @include post-text;
+        line-height: 35px;
+    }
+
+    &-label {
+        @include post-subtitle;
+    }
+
+    &-ingredients {
+        @include ingredients;
+        grid-row: 5/6;
+    }
+    
+    ul {
+        padding: 0;
+        padding-left: 48px;
+        margin-left: 21px;
+        border-left: 2px solid $lightbrown-shade;
+    }
+
+    &-footer {
+        @include date-text;
+    }
+}
