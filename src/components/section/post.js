@@ -6,7 +6,6 @@ import data from '../../data/post.json'
 const Post = (props) => {
 
 
-    console.log(props.match)
 
     const [count, setCount] = useState(15)
 

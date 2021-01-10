@@ -15,8 +15,8 @@ function App() {
 
       <Switch>
         <Route exact path="/"><Home /></Route>
-        <Route path="/post"><Post /></Route>
-        <Route path="/:id"><Post /></Route>
+        <Route exact path="/post"><Post /></Route>
+        <Route path="/post/:id" component={Post} />
       </Switch>
 
       <Footer />

@@ -2,7 +2,10 @@ import React from 'react';
 
 import Post from '../components/section/post'
 
-const post = (props) => {
+const post = ({match}) => {
+
+    console.log(match);
+
     return (
         <>
         <section id="post">

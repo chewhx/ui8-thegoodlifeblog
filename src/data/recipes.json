@@ -1,42 +1,42 @@
 [
     {
-        "name": "Effortless Spinach and Chicken Salad",
-        "description": "Pre-cooked chicken can be used in this recipe for an even quicker meal. I used pepita seeds, but sunflower seeds or other nuts will also work. Best if served right away. Pre-cooked chicken can be used in this recipe for an even quicker.",
-        "image": "69d539e7de35d229e6707787a03dc5098418da02"
+      "id": "69d539e7de35d229e6707787a03dc5098418da02",
+      "name": "Effortless Spinach and Chicken Salad",
+      "description": "Pre-cooked chicken can be used in this recipe for an even quicker meal. I used pepita seeds, but sunflower seeds or other nuts will also work. Best if served right away. Pre-cooked chicken can be used in this recipe for an even quicker."
+      
     },
-    {
-        "name": "Simple Goat Cheese, Onion, Spinach & Lemon Pizza",
-        "description": "Spicy salami and sweet honey are perfect partners on this Neapolitan-style pizza with fresh goat cheese, spinach, lemon, onions and sliced chilies.",
-        "image": "10185fafdb5fb7680ca89017efce40ea3d6c531d"
+    { "id": "10185fafdb5fb7680ca89017efce40ea3d6c531d",
+      "name": "Simple Goat Cheese, Onion, Spinach & Lemon Pizza",
+      "description": "Spicy salami and sweet honey are perfect partners on this Neapolitan-style pizza with fresh goat cheese, spinach, lemon, onions and sliced chilies."
+      
     },
-    {
+    { "id": "5f40f323d3b257d60314d07c577c796cf7b7bc40",
       "name": "Sweet & Sour Zuccini Spinach Salad",
-      "description": "Slivered up in a flash with handheld Japanese mandoline, then tossed with a lemony dressing, raw zucchini tastes great and has nice texture",
-      "image": "5f40f323d3b257d60314d07c577c796cf7b7bc40"
+      "description": "Slivered up in a flash with handheld Japanese mandoline, then tossed with a lemony dressing, raw zucchini tastes great and has nice texture"
+      
     },
-    {
+    { "id": "f81be8cc2ac6b97bf195ab16fcdee0278e6800a1",
       "name": "White Chia Seed Coconut Cake",
-      "description": "These chewy, coconut oatmeal cookies are bursting with chocolate chips (and they're vegan too!). Purchase vegan chocolate chips online or look for dark chocolate.",
-      "image": "f81be8cc2ac6b97bf195ab16fcdee0278e6800a1"
+      "description": "These chewy, coconut oatmeal cookies are bursting with chocolate chips (and they're vegan too!). Purchase vegan chocolate chips online or look for dark chocolate."
+      
     },
-    {
+    { "id": "b23388da7bbdf5f7a056c801e72be9f7cd29db11",
       "name": "Thai Rice Noodles with Vegetables",
-      "description": "Scratch-made chicken curry is a thing of beauty, with far greater complexity than anything that comes out of a jar. Add supple rice noodles and an array of toppings.",
-      "image": "b23388da7bbdf5f7a056c801e72be9f7cd29db11"
+      "description": "Scratch-made chicken curry is a thing of beauty, with far greater complexity than anything that comes out of a jar. Add supple rice noodles and an array of toppings."
+      
     },
-    {
+    { "id": "517d33d49d38799f1bbf4ecf3e505ac5c2a3a853",
       "name": "Green Salad with Beef Steak Cuts",
-      "description": "This stew tastes even better  the next day. Just cool it down before placing it, covered, in the refrigerator. When you're ready to serve, gently reheat the stew.",
-      "image": "517d33d49d38799f1bbf4ecf3e505ac5c2a3a853"
+      "description": "This stew tastes even better  the next day. Just cool it down before placing it, covered, in the refrigerator. When you're ready to serve, gently reheat the stew."
+      
     },
-    {
+    { "id": "641623a8e6bb84744969656c536d744b46e1c83e",
       "name": "Delicious Maple Glazed Salmon",
-      "description": "Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub sel.",
-      "image": "641623a8e6bb84744969656c536d744b46e1c83e"
+      "description": "Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub sel."
+      
     },
-    {
+    { "id": "9a9b284da074b097f7778379a9987d37a0bcc68b",
       "name": "Paleo Beef Steaks with Vegetables and Spinach",
-      "description": "Who can say no to tender, braised meat in a rich sauce flavored with wine and vegetables, not to mention that ultra-flavorful and tender marrow inside a shank? ",
-      "image": "9a9b284da074b097f7778379a9987d37a0bcc68b"
+      "description": "Who can say no to tender, braised meat in a rich sauce flavored with wine and vegetables, not to mention that ultra-flavorful and tender marrow inside a shank? "
     }
 ]

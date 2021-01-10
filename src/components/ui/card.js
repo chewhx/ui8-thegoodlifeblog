@@ -10,8 +10,8 @@ let image = "https://storage.googleapis.com/recipes-9ru4lzic/69d539e7de35d229e67
 
 export const Card = (props) => {
 
-    if (props.image) {
-        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.image + ".jpg"
+    if (props.id) {
+        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.id + ".jpg"
     }
 
     return (
@@ -34,8 +34,8 @@ export const Card = (props) => {
 
 export const CardLg = (props) => {
 
-    if (props.image) {
-        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.image + ".jpg"
+    if (props.id) {
+        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.td + ".jpg"
     }
 
     return (
@@ -59,8 +59,8 @@ export const CardLg = (props) => {
 
 export const CardMd = (props) => {
 
-    if (props.image) {
-        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.image + ".jpg"
+    if (props.id) {
+        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.id + ".jpg"
     }
 
     return (
@@ -75,7 +75,7 @@ export const CardMd = (props) => {
             {props.description ? pad(props.description, 170) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            {rDate()}  &nbsp; •  &nbsp; <Link to="/item">Read More</Link>       
+            {rDate()}  &nbsp; •  &nbsp; <Link to={`/post/${props.id}`}>Read More</Link>       
             </div>
         </div>
     )
@@ -83,8 +83,8 @@ export const CardMd = (props) => {
 
 export const CardSm = (props) => {
 
-    if (props.image) {
-        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.image + ".jpg"
+    if (props.id) {
+        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.id + ".jpg"
     }
 
     return (

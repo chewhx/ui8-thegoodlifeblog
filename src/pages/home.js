@@ -14,18 +14,18 @@ const home = (props) => {
         <section id="home">
 
             <div className="container">
-                {recipes1.map((recipe, index) => (
+                {recipes1.map((recipe) => (
                     <CardMd 
-                        key={index}
+                        key={recipe.id}
                         title={recipe.name}
-                        image={recipe.image}
+                        id={recipe.id}
                         description={recipe.description} />
                 ))} 
-                {recipes2.map((recipe, index) => (
+                {recipes2.map((recipe) => (
                     <CardSm 
-                        key={index}
+                        key={recipe.id}
                         title={recipe.name}
-                        image={recipe.image}
+                        id={recipe.id}
                         description={recipe.description} />
                 ))}
             </div>
