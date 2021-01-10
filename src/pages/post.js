@@ -1,11 +1,8 @@
 import React from 'react';
 
-import Modal from '../components/ui/modal'
 import Post from '../components/section/post'
 
-import blogroll from '../data/blogroll.json'
-
-const post_one = (props) => {
+const post = (props) => {
     return (
         <>
         <section id="post">
@@ -18,4 +15,4 @@ const post_one = (props) => {
     )
 };
 
-export default post_one
+export default post

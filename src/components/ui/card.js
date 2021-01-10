@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import { rDate } from '../utils/rDate'
 import { pad } from '../utils/padString'
+
+import { Link } from 'react-router-dom'
 
 let image = "https://storage.googleapis.com/recipes-9ru4lzic/69d539e7de35d229e6707787a03dc5098418da02.jpg"
 
@@ -48,7 +50,7 @@ export const CardLg = (props) => {
             {props.description ? pad(props.description, 150) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            {rDate()}  &nbsp; •  &nbsp;  Read More        
+            {rDate()}  &nbsp; •  &nbsp;  Read More       
             </div>
         </div>
     )
@@ -73,7 +75,7 @@ export const CardMd = (props) => {
             {props.description ? pad(props.description, 170) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            {rDate()}  &nbsp; •  &nbsp;  Read More        
+            {rDate()}  &nbsp; •  &nbsp; <Link to="/item">Read More</Link>       
             </div>
         </div>
     )

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Tag from '../ui/tag'
 import Item from '../ui/ingredient'
-import Like from '../ui/like'
 import data from '../../data/post.json'
 
 const Post = (props) => {
+
+
+    console.log(props.match)
 
     const [count, setCount] = useState(15)
 
@@ -47,19 +49,19 @@ const Post = (props) => {
                 {data.date} &nbsp; • &nbsp; {data.comments}
 
                 <div className="social-icon">
-                <i class="fas fa-heart" onClick={()=> clickHandler()} ></i>
+                <i className="fas fa-heart" onClick={()=> clickHandler()} ></i>
                 <span className="fab-text">
                         {count} Likes</span>
                 </div>
             
                 <div className="social-icon">
-                <i class="fab fa-facebook-f"></i>
+                <i className="fab fa-facebook-f"></i>
                 <span className="fab-text">
                         SHARE</span>
                 </div>
 
                 <div className="social-icon">
-                <i class="fab fa-twitter"></i>
+                <i className="fab fa-twitter"></i>
                 <span className="fab-text">
                         TWEET</span>
                 </div>
