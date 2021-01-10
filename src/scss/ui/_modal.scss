@@ -4,8 +4,9 @@
     border: 1px solid #C6C6C6;
     text-align: center;
     width: 286px;
-    height: 634px;
+    height: calc(633px - 33px);
     padding: 33px 0px 0px;
+    overflow: scroll;
 
     &-title {
         @include title-text;

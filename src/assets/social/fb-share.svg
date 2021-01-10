@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="61px" height="12px" viewBox="0 0 61 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Food Blog</title>
+    <g id="Food-Blog" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-The-Good-Life---Post-Details" transform="translate(-586.000000, -2567.000000)">
+            <g id="Text" transform="translate(110.000000, 1522.000000)"></g>
+            <g id="Share" transform="translate(110.000000, 2563.800000)" fill="#B7A698">
+                <text id="SHARE" font-family="Montserrat-Bold, Montserrat" font-size="10" font-weight="bold" letter-spacing="1.79999995">
+                    <tspan x="494" y="13.2">SHARE</tspan>
+                </text>
+                <path d="M481.672131,5.32234043 C481.344262,5.22659574 480.967213,5.16276596 480.622951,5.16276596 C480.196721,5.16276596 479.278689,5.43404255 479.278689,5.9606383 L479.278689,7.2212766 L481.459016,7.2212766 L481.459016,9.34361702 L479.278689,9.34361702 L479.278689,15.2 L477.081967,15.2 L477.081967,9.34361702 L476,9.34361702 L476,7.2212766 L477.081967,7.2212766 L477.081967,6.15212766 C477.081967,4.54042553 477.836066,3.2 479.655738,3.2 C480.278689,3.2 481.393443,3.23191489 482,3.4393617 L481.672131,5.32234043 Z" id="Facebook-Icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>

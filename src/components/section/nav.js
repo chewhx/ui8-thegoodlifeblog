@@ -1,5 +1,6 @@
 import React from 'react'
 import brand from '../../assets/logos/brand.svg'
+import { Link } from 'react-router-dom'
 
 const Nav = (props) => {
     return (
@@ -7,9 +8,11 @@ const Nav = (props) => {
             <nav>
                 <ul>
                     <li>About</li>
-                    <li>Recipes</li>
+                    <li><Link to='/post'>Recipes</Link></li>
                 </ul>
+                <Link to='/'>
                 <img src={brand} alt="brand-logo" />
+                </Link>
                 <ul>
                     <li>Stories</li>
                     <li>Contact</li>
@@ -21,3 +24,4 @@ const Nav = (props) => {
 };
 
 export default Nav
+

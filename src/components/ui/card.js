@@ -1,21 +1,30 @@
 import React, { useRef } from 'react';
-import image from '../../assets/images/salad0.png'
+
+import { rDate } from '../utils/rDate'
+import { pad } from '../utils/padString'
+
+let image = "https://storage.googleapis.com/recipes-9ru4lzic/69d539e7de35d229e6707787a03dc5098418da02.jpg"
+
 
 export const Card = (props) => {
+
+    if (props.image) {
+        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.image + ".jpg"
+    }
 
     return (
         <div className="card">
             <div className="card-title">
-            Effortless Spinach and Chicken Salad
+            {props.title ? props.title : "Excepteur sint occaecat cupidatat non proident"}
             </div>
             <div> 
-            <img className="card-image" src="https://source.unsplash.com//collection/160236/1" alt="food" />
+            <img className="card-image" src={image} alt="food" />
             </div>
             <div className="card-body">
-            Pre-cooked chicken can be used in this recipe for an even quicker meal. I used pepita seeds, but sunflower seeds or other nuts will also work. Best if served right away. Pre-cooked chicken can be used in this recipe for an even quicker meal. I used pepita seeds, but sunflower seeds or other nuts will also work. Best if served right away. 
+            {props.description ? pad(props.description, 140) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            15 September 2015  &nbsp; •  &nbsp;  Read More        
+            {rDate()}  &nbsp; •  &nbsp;  Read More        
             </div>
         </div>
     )
@@ -23,19 +32,23 @@ export const Card = (props) => {
 
 export const CardLg = (props) => {
 
+    if (props.image) {
+        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.image + ".jpg"
+    }
+
     return (
         <div className="card card-lg">
             <div>
-            <img className="card-image" src="https://source.unsplash.com//collection/160236/1" alt="food" />
+            <img className="card-image" src={image} alt="food" />
             </div>
             <div className="card-title">
-            Effortless Spinach and Chicken Salad
+            {props.title ? props.title : "Excepteur sint occaecat cupidatat non proident"}
             </div>
             <div className="card-body">
-            Pre-cooked chicken can be used in this recipe for an even quicker meal. I used pepita seeds, but sunflower seeds or other nuts will also work. Best if served right away. Pre-cooked chicken can be used in this recipe for an even quicker meal. I used pepita seeds, but sunflower seeds or other nuts will also work. Best if served right away. 
+            {props.description ? pad(props.description, 150) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            15 September 2015  &nbsp; •  &nbsp;  Read More        
+            {rDate()}  &nbsp; •  &nbsp;  Read More        
             </div>
         </div>
     )
@@ -44,19 +57,23 @@ export const CardLg = (props) => {
 
 export const CardMd = (props) => {
 
+    if (props.image) {
+        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.image + ".jpg"
+    }
+
     return (
         <div className="card card-md">
             <div className="card-title">
-            Effortless Spinach and Chicken Salad
+            {props.title ? props.title : "Excepteur sint occaecat cupidatat non proident"}
             </div>
             <div>
-            <img className="card-image" src="https://source.unsplash.com//collection/160236/2" alt="food" />
+            <img className="card-image" src={image} alt="food" />
             </div>
             <div className="card-body">
-            Pre-cooked chicken can be used in this recipe for an even quicker meal. I used pepita seeds, but sunflower seeds or other nuts will also work. Best if served right away. Pre-cooked chicken can be used in this recipe for an even quicker meal. I used pepita seeds, but sunflower seeds or other nuts will also work. Best if served right away. 
+            {props.description ? pad(props.description, 170) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            15 September 2015  &nbsp; •  &nbsp;  Read More        
+            {rDate()}  &nbsp; •  &nbsp;  Read More        
             </div>
         </div>
     )
@@ -64,19 +81,23 @@ export const CardMd = (props) => {
 
 export const CardSm = (props) => {
 
+    if (props.image) {
+        image = "https://storage.googleapis.com/recipes-9ru4lzic/"  +  props.image + ".jpg"
+    }
+
     return (
         <div className="card card-sm">
             <div className="card-title">
-            Effortless Spinach and Chicken Salad
+            {props.title ? props.title : "Excepteur sint occaecat cupidatat non proident"}
             </div>
             <div>
             <img className="card-image" src={image} alt="food" />
             </div>
             <div className="card-body">
-            Slivered up in a flash with handheld Japanese mandoline, then tossed with a lemony dressing, raw zucchini tastes great and has nice texture 
+            {props.description ? pad(props.description, 160) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            15 September 2015  &nbsp; •  &nbsp;  Read More        
+            {rDate()}  &nbsp; •  &nbsp;  Read More        
             </div>
         </div>
     )

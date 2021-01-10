@@ -1,13 +1,15 @@
 import React from 'react';
+
 import brand from '../../assets/logos/brand.svg'
 import facebook from '../../assets/social/facebook.svg'
 import twitter from '../../assets/social/twitter.svg'
 import rss from '../../assets/social/rss.svg'
 
 
+
 const Footer = (props) => {
     return (
-        <section>
+        <section id="footer">
             <footer>
                 <img src={brand} alt="brand-logo" />
 

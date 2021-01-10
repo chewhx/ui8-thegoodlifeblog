@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { CardMd, CardSm, CardLg } from './components/ui/card'
 import Nav from './components/section/nav'
 import Footer from './components/section/footer'
-import HomeOne from './pages/home_one'
-import HomeTwo from './pages/home_two'
-import PostOne from './pages/post_one'
+import Home from './pages/home'
+import Post from './pages/post_one'
 
 import Modal from './components/ui/modal'
-import Post from './components/section/post'
 
 
 function App() {
   return (
-    <>
-      <Nav />
-      <PostOne />
+    <BrowserRouter>
+      
+      <Nav /> 
+
+      <Switch>
+
+        <Route exact path="/"><Home /></Route>
+        <Route path="/post"><Post /></Route>
+
+      </Switch>
+
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

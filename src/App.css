@@ -18,7 +18,7 @@ section {
   top: 0;
   padding: 48px 0px;
   background-color: #fff;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 nav {
@@ -53,9 +53,8 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: 70px auto 0px;
   padding: 30px 0;
-  position: absolute;
   background-color: #fff;
 }
 
@@ -141,6 +140,8 @@ footer .wrapper {
   color: #a78f79;
   color: #b7a698;
   line-height: 18px;
+  display: flex;
+  justify-content: space-between;
 }
 
 @use '../textstyle';
@@ -208,7 +209,7 @@ footer .wrapper {
 }
 
 .card-md .card-title {
-  width: 50%;
+  width: 70%;
 }
 
 .card-md .card-image {
@@ -257,8 +258,9 @@ footer .wrapper {
   border: 1px solid #C6C6C6;
   text-align: center;
   width: 286px;
-  height: 634px;
+  height: calc(633px - 33px);
   padding: 33px 0px 0px;
+  overflow: scroll;
 }
 
 .modal-title {
@@ -289,24 +291,54 @@ footer .wrapper {
   line-height: 50px;
 }
 
-#feature .container {
-  justify-content: space-evenly;
+@use '../textstyle';
+.social-icon {
+  width: fit-content;
+  cursor: pointer;
 }
 
-.post-image {
-  width: 633px;
-  object-fit: cover;
+.social-icon .fa-heart:hover {
+  color: #e23b3b;
+}
+
+.social-icon :hover {
+  color: #7d7d7d;
+}
+
+.red {
+  color: #e23b3b;
+}
+
+.fab-text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  color: #a78f79;
+  margin-left: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#home .container {
+  row-gap: 56px;
 }
 
 #post .container {
-  margin-left: 10%;
-  width: 633px;
-  justify-content: flex-start;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0px auto;
+  justify-content: center;
 }
 
-@media screen and (orientation: portrait) {
-  #post .container {
-    width: 80%;
-  }
+#post .post-image {
+  width: 100%;
+  height: 633px;
+  object-fit: cover;
+  margin: 0px 0px 40px;
+}
+
+#post .post {
+  width: 100%;
+  max-width: 633px;
 }
 /*# sourceMappingURL=App.css.map */

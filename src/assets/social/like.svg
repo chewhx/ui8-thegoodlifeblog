@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="like-icon" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="Food-Blog" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-The-Good-Life---Post-Details" transform="translate(-476.000000, -2565.000000)">
+            <g id="Text" transform="translate(110.000000, 1522.000000)"></g>
+            <g id="Share" transform="translate(110.000000, 2563.800000)" stroke="#EF6979" stroke-width="2">
+                <path d="M375.994768,3 C374.832138,3 373.752554,3.61875 373.18508,4.6225 C372.617606,3.61875 371.551862,3 370.389232,3 C368.645287,3 367.192,4.38875 367.192,6.135 C367.192,6.575 367.288886,6.96 367.441135,7.3725 C367.607225,7.785 367.85636,8.1975 368.091654,8.5825 C369.378851,10.645 371.288886,12.50125 373.18508,14 C375.095114,12.50125 377.005149,10.645 378.292346,8.5825 C378.52764,8.1975 378.776775,7.785 378.929024,7.3725 C379.081273,6.96 379.192,6.575 379.192,6.135 C379.192,4.38875 377.738713,3 375.994768,3 Z" id="Icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>

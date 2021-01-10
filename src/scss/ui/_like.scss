@@ -1,0 +1,35 @@
+@use '../textstyle';
+
+.social-icon {
+    width: fit-content;
+    cursor: pointer;
+
+    .fa-heart:hover {
+        color:#e23b3b;
+    }
+
+
+    :hover {
+        color: $secondary-color;
+    }
+
+}
+
+
+
+.red {
+    color:#e23b3b; 
+}
+
+.fab-text {
+    @include bottom-navigation;
+    margin-left: 12px;
+    font-size: 12px;
+    font-weight: $font-bold;
+
+}
+
+
+
+
+
