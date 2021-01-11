@@ -1,5 +1,42 @@
 #home {
+    background: no-repeat center/cover url('https://storage.googleapis.com/recipes-9ru4lzic/51819525c1305fbde4de67748491ddde2e06c354.jpg');
+    background-blend-mode: soft-light;
+    background-color: $brown-shade;
+    position: absolute;
+    top: 0;
+
     .container {
-        row-gap: 56px;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.1;
+    }
+
+    .overlay {
+        background-color: rgba($color: $lightbrown-shade, $alpha: 0.7);
+        display: flex;
+        flex-direction: column;
+        font-family: $font-body-serif;
+        font-size: 105px;
+        top: 0;
+        text-align: center;
+        line-height: 140px;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding: 20px 0 100px;
+
+
+
+        @media (max-width: 987px) {
+            font-size: 70px;
+            line-height: 110px;
+        }
     }
 }

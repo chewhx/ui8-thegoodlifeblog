@@ -1,32 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Tag from '../ui/tag'
 import Item from '../ui/ingredient'
 import data from '../../data/post.json'
+import { rDate } from '../utils/rDate'
 
 const Post = (props) => {
-
-
 
     const [count, setCount] = useState(15)
 
     const clickHandler = () => {
-        setCount(prevCount => prevCount + 1)
-        document.querySelector(".fa-heart").classList.add("red")
-        
-    };
+        setCount(prevCount => prevCount + 1);
+        document.querySelector(".fa-heart").classList.add("red");
+    }
+
+    const date = useMemo(()=> {
+        return rDate()
+    }, [])
+
+
 
     return (
         <div className="post">
             <div className="post-tags">
-                <Tag>Lunch</Tag>
-                <Tag>Western</Tag>
-                <Tag>Italian</Tag>
+                {props.tags ? props.tags.map((tag, index) => <Tag key={index}>{tag}</Tag>) :
+                (
+                <>
+                <Tag>Lorem</Tag>
+                <Tag>Ipsum</Tag>
+                <Tag>Dolor</Tag>
+                </>
+                )
+                }
             </div>
             <div className="post-title">
-                {data.title}
+                {props.title ? props.title : "Duis aute irure dolor in reprehenderit in voluptate"}
             </div>
             <div className="post-description">
-                {data.description}
+                {props.description ? props.description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
             </div>
             <div className="post-label">
                 Ingredients:
@@ -42,10 +52,10 @@ const Post = (props) => {
                 Preparation:
             </div>
             <div className="post-description" >
-                {data.preparation}
+                Unfortunately. There are no real instructions here for preparing this delicious looking dish, because this is only a live mockup site. And for placeholding purposes, I'm going to insert Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
             <div className="post-footer">
-                {data.date} &nbsp; • &nbsp; {data.comments}
+                {date} &nbsp; • &nbsp; 15 Comments
 
                 <div className="social-icon">
                 <i className="fas fa-heart" onClick={()=> clickHandler()} ></i>

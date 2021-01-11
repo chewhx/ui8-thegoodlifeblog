@@ -7,8 +7,8 @@ const Nav = (props) => {
         <section id="nav">
             <nav>
                 <ul>
-                    <li>About</li>
-                    <li><Link to='/post'>Recipes</Link></li>
+                    <li><Link to='/about'>About</Link></li>
+                    <li><Link to='/recipes'>Recipes</Link></li>
                 </ul>
                 <Link to='/'>
                 <img src={brand} alt="brand-logo" />

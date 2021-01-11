@@ -3,7 +3,7 @@
 .post {
     display: grid;
     width: 100%;
-    grid-template-rows: 33px 65px auto 56px auto 64px 160px 18px;
+    grid-template-rows: 33px 65px auto 56px auto 64px auto 18px;
 
     &-tags {
         display: flex;
@@ -42,4 +42,33 @@
         display: flex;
         justify-content: space-between;
     }
+}
+
+.social-icon {
+    width: fit-content;
+    cursor: pointer;
+
+    .fa-heart:hover {
+        color:#e23b3b;
+    }
+
+
+    :hover {
+        color: $secondary-color;
+    }
+
+}
+
+
+
+.red {
+    color:#e23b3b; 
+}
+
+.fab-text {
+    @include bottom-navigation;
+    margin-left: 12px;
+    font-size: 12px;
+    font-weight: $font-bold;
+
 }

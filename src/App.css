@@ -12,6 +12,10 @@ section {
   margin: 0px auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 @use '../textstyle';
 #nav {
   position: sticky;
@@ -85,7 +89,7 @@ footer .wrapper {
 .post {
   display: grid;
   width: 100%;
-  grid-template-rows: 33px 65px auto 56px auto 64px 160px 18px;
+  grid-template-rows: 33px 65px auto 56px auto 64px auto 18px;
 }
 
 .post-tags {
@@ -142,6 +146,33 @@ footer .wrapper {
   line-height: 18px;
   display: flex;
   justify-content: space-between;
+}
+
+.social-icon {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.social-icon .fa-heart:hover {
+  color: #e23b3b;
+}
+
+.social-icon :hover {
+  color: #7d7d7d;
+}
+
+.red {
+  color: #e23b3b;
+}
+
+.fab-text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  color: #a78f79;
+  margin-left: 12px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 @use '../textstyle';
@@ -254,34 +285,6 @@ footer .wrapper {
 }
 
 @use '../textstyle';
-.modal {
-  border: 1px solid #C6C6C6;
-  text-align: center;
-  width: 286px;
-  height: calc(633px - 33px);
-  padding: 33px 0px 0px;
-  overflow: scroll;
-}
-
-.modal-title {
-  font-family: "PT Serif";
-  font-weight: 700;
-  font-size: 24px;
-  color: #3b3d40;
-}
-
-.modal ul {
-  list-style: none;
-  margin-top: 34px;
-  padding: 0px;
-  font-family: "Source Serif Pro";
-  font-weight: 400;
-  font-size: 18px;
-  color: #b7a698;
-  line-height: 40px;
-}
-
-@use '../textstyle';
 @use '../config';
 .ingredient-item {
   font-family: "Source Serif Pro";
@@ -292,35 +295,63 @@ footer .wrapper {
 }
 
 @use '../textstyle';
-.social-icon {
-  width: fit-content;
-  cursor: pointer;
-}
-
-.social-icon .fa-heart:hover {
-  color: #e23b3b;
-}
-
-.social-icon :hover {
-  color: #7d7d7d;
-}
-
-.red {
-  color: #e23b3b;
-}
-
-.fab-text {
+.button {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 14px;
   color: #a78f79;
-  margin-left: 12px;
-  font-size: 12px;
+  width: fit-content;
+  border-radius: 40px;
+  padding: 19px 54px;
+  text-transform: uppercase;
   font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  line-height: normal;
+  margin: 0 auto;
+}
+
+#home {
+  background: no-repeat center/cover url("https://storage.googleapis.com/recipes-9ru4lzic/51819525c1305fbde4de67748491ddde2e06c354.jpg");
+  background-blend-mode: soft-light;
+  background-color: #a78f79;
+  position: absolute;
+  top: 0;
 }
 
 #home .container {
-  row-gap: 56px;
+  width: 100%;
+  height: 100%;
+}
+
+#home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+}
+
+#home .overlay {
+  background-color: rgba(183, 166, 152, 0.7);
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Serif Pro";
+  font-size: 105px;
+  top: 0;
+  text-align: center;
+  line-height: 140px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding: 20px 0 100px;
+}
+
+@media (max-width: 987px) {
+  #home .overlay {
+    font-size: 70px;
+    line-height: 110px;
+  }
 }
 
 #post .container {
@@ -340,5 +371,19 @@ footer .wrapper {
 #post .post {
   width: 100%;
   max-width: 633px;
+}
+
+#about .container {
+  width: 70%;
+  display: grid;
+}
+
+#about .container .post-title {
+  width: 100%;
+  grid-row: 1/2;
+}
+
+#home .container {
+  row-gap: 56px;
 }
 /*# sourceMappingURL=App.css.map */

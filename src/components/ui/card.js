@@ -26,7 +26,7 @@ export const Card = (props) => {
             {props.description ? pad(props.description, 140) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            {rDate()}  &nbsp; •  &nbsp;  Read More        
+            {rDate()}  &nbsp; •  &nbsp;  <Link to={`/post/${props.id}`}>Read More</Link>       
             </div>
         </div>
     )
@@ -50,7 +50,7 @@ export const CardLg = (props) => {
             {props.description ? pad(props.description, 150) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            {rDate()}  &nbsp; •  &nbsp;  Read More       
+            {rDate()}  &nbsp; •  &nbsp;  <Link to={`/post/${props.id}`}>Read More</Link>      
             </div>
         </div>
     )
@@ -99,10 +99,8 @@ export const CardSm = (props) => {
             {props.description ? pad(props.description, 160) : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."}
             </div>
             <div className="card-footer">
-            {rDate()}  &nbsp; •  &nbsp;  Read More        
+            {rDate()}  &nbsp; •  &nbsp;  <Link to={`/post/${props.id}`}>Read More</Link>       
             </div>
         </div>
     )
 };
-
-export default { CardLg, CardMd, CardSm, Card }

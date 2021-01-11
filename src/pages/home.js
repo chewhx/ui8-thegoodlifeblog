@@ -1,37 +1,15 @@
-import React from 'react'
-import { CardMd, CardSm, Card } from '../components/ui/card'
-import recipes from '../data/recipes.json'
-
-
-
+import React from 'react';
+import Button from '../components/ui/button'
 
 const home = (props) => {
-
-
-    const recipes1 = recipes.slice(0, 2)
-    const recipes2 = recipes.slice(2, recipes.length)
     return (
         <section id="home">
-
-            <div className="container">
-                {recipes1.map((recipe) => (
-                    <CardMd 
-                        key={recipe.id}
-                        title={recipe.name}
-                        id={recipe.id}
-                        description={recipe.description} />
-                ))} 
-                {recipes2.map((recipe) => (
-                    <CardSm 
-                        key={recipe.id}
-                        title={recipe.name}
-                        id={recipe.id}
-                        description={recipe.description} />
-                ))}
+            <div className="overlay">
+                <p>There is no <br />sincerer love than <br /> <strong>the love of food</strong>.</p>
+                <Button link="/recipes">Explore our recipes</Button>
             </div>
         </section>
-
     )
 };
 
-export default home
+export default home;
