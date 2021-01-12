@@ -32,10 +32,12 @@ nav {
             margin: auto 30px;
 
             &:nth-child(n+2):nth-child(-n+3){
-                order: 1;
+                order: -1;
             }
         }
     }
+
+
 
     @include responsive(phone) {
 
@@ -49,27 +51,11 @@ nav {
                 margin: 10px;
                 font-size: 20px;
 
-                &:nth-child(n+2):nth-child(-n+3){
-                    order: 0;
-                    display: none;
-                }
-
-                &:nth-child(n+4):nth-child(-n+5){
-                    order: 0;
+                &:nth-child(n+2):nth-child(-n+5){
+                    order: 1;
                     display: none;
                 }
     
-            }
-
-            .nav-links {
-                position: absolute;
-                text-align: center;
-                width: 28%;
-                top: 80%;
-                right: 10%;
-                background-color: yellow;
-                height: 0px;
-                overflow: hidden;
             }
 
         }     
@@ -88,6 +74,8 @@ nav {
         transition: display 1s ease-in-out;
     }
 }
+
+
 
 .collapse {
     height: 0px;

@@ -11,21 +11,17 @@ const Footer = (props) => {
     return (
         <section id="footer">
             <footer>
-                <img src={brand} alt="brand-logo" />
+                <div className="container">
 
-                <ul>
-                    <li>About</li>
-                    <li>Recipes</li>
-                    <li>Stories</li>
-                    <li>Contact</li>
-                </ul>
+                <img src={brand} alt="brand-logo" />
                 <div className="wrapper">
                     <img src={facebook} alt="facebook-icon" />
                     <img src={twitter} alt="twitter-icon" />
                     <img src={rss} alt="rss-icon" />    
                 </div>
- 
 
+
+                </div>
             </footer>            
         </section>
     )

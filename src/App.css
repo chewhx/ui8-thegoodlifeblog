@@ -59,7 +59,7 @@ nav ul li {
 }
 
 nav ul li:nth-child(n+2):nth-child(-n+3) {
-  order: 1;
+  order: -1;
 }
 
 @media only screen and (max-width: 691px) {
@@ -73,23 +73,9 @@ nav ul li:nth-child(n+2):nth-child(-n+3) {
     margin: 10px;
     font-size: 20px;
   }
-  nav ul li:nth-child(n+2):nth-child(-n+3) {
-    order: 0;
+  nav ul li:nth-child(n+2):nth-child(-n+5) {
+    order: 1;
     display: none;
-  }
-  nav ul li:nth-child(n+4):nth-child(-n+5) {
-    order: 0;
-    display: none;
-  }
-  nav ul .nav-links {
-    position: absolute;
-    text-align: center;
-    width: 28%;
-    top: 80%;
-    right: 10%;
-    background-color: yellow;
-    height: 0px;
-    overflow: hidden;
   }
 }
 
@@ -106,6 +92,14 @@ nav ul li:nth-child(n+2):nth-child(-n+3) {
     display: block;
     transition: display 1s ease-in-out;
   }
+}
+
+.nav-links {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #b7a698;
 }
 
 .collapse {
@@ -130,6 +124,18 @@ footer {
   background-color: #fff;
 }
 
+footer .container {
+  width: 80%;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 691px) {
+  footer .container {
+    justify-content: center;
+    width: 200px;
+  }
+}
+
 footer ul {
   list-style: none;
   padding: 0;
@@ -148,15 +154,27 @@ footer ul li {
 }
 
 footer .wrapper {
-  width: 15%;
+  width: 200px;
   display: inline-flex;
   justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 691px) {
+  footer .wrapper {
+    margin-top: 20px;
+  }
 }
 
 .post {
   display: grid;
   width: 100%;
-  grid-template-rows: 33px 65px auto 56px auto 64px auto 18px;
+  grid-template-rows: 33px 64px auto 65px auto 64px 160px auto;
+}
+
+@media only screen and (max-width: 691px) {
+  .post {
+    grid-template-rows: 33px 94px auto 65px auto 64px 160px auto;
+  }
 }
 
 .post-tags {
@@ -179,6 +197,7 @@ footer .wrapper {
   font-size: 20px;
   color: #7d7d7d;
   line-height: 35px;
+  align-self: center;
 }
 
 .post-label {
@@ -186,6 +205,7 @@ footer .wrapper {
   font-weight: 700;
   font-size: 20px;
   color: #3b3d40;
+  align-self: flex-end;
 }
 
 .post-ingredients {
@@ -220,6 +240,7 @@ footer .wrapper {
   display: flex;
   width: 300px;
   justify-content: flex-start;
+  margin-top: 20px;
 }
 
 .social-icon {
@@ -400,6 +421,13 @@ footer .wrapper {
   line-height: 50px;
 }
 
+@media only screen and (max-width: 691px) {
+  .ingredient-item {
+    font-size: 18px;
+    line-height: 40px;
+  }
+}
+
 @use '../textstyle';
 .button {
   font-family: "Montserrat";
@@ -454,8 +482,8 @@ footer .wrapper {
 
 @media (max-width: 987px) {
   #home .overlay {
-    font-size: 70px;
-    line-height: 110px;
+    font-size: 400%;
+    line-height: 110%;
   }
 }
 

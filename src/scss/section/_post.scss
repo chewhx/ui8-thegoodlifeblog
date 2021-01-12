@@ -1,7 +1,13 @@
+
+
 .post {
     display: grid;
     width: 100%;
-    grid-template-rows: 33px 65px auto 56px auto 64px auto 18px;
+    grid-template-rows: 33px 64px auto 65px auto 64px 160px auto;
+
+    @include responsive(phone) {
+        grid-template-rows: 33px 94px auto 65px auto 64px 160px auto;
+    }
 
     &-tags {
         display: flex;
@@ -12,15 +18,18 @@
     &-title {
         @include post-title;
         grid-row: 2/3;
+
     }
 
     &-description {
         @include post-text;
         line-height: 35px;
+        align-self: center;
     }
 
     &-label {
         @include post-subtitle;
+        align-self: flex-end;
     }
 
     &-ingredients {
@@ -45,6 +54,7 @@
             display: flex;
             width: 300px;
             justify-content: flex-start;
+            margin-top: 20px;
         }
     }
 }

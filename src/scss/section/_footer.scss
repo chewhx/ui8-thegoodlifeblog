@@ -1,3 +1,5 @@
+
+
 footer {
     width: 100%;
     max-width: 1240px;
@@ -8,6 +10,16 @@ footer {
     margin: 70px auto 0px;
     padding: 30px 0;
     background-color: #fff;
+    
+    .container {
+        width: 80%;
+        justify-content: space-between;
+
+        @include responsive(phone) {
+            justify-content: center;
+            width: 200px;
+        }
+    }
 
     ul {
         list-style: none;
@@ -23,8 +35,12 @@ footer {
     }
 
     .wrapper {
-        width: 15%;
+        width: 200px;
         display: inline-flex;
         justify-content: space-evenly;
+
+        @include responsive(phone){
+            margin-top: 20px;
+        }
     }
 }

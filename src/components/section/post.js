@@ -52,7 +52,7 @@ const Post = (props) => {
                 Preparation:
             </div>
             <div className="post-description" >
-                Unfortunately. There are no real instructions here for preparing this delicious looking dish, because this is only a live mockup site. And for placeholding purposes, I'm going to insert Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Unfortunately. There are no real instructions here for preparing this delicious looking dish, because this is only a demo site. 
             </div>
             <div className="post-footer">
                 <div className="wrapper">

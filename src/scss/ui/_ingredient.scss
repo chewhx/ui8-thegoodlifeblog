@@ -4,5 +4,9 @@
 .ingredient-item {
     @include ingredients;
 
+    @include responsive(phone) {
+        font-size: 18px;
+        line-height: 40px;
+    }
 
 }
