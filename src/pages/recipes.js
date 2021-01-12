@@ -23,6 +23,8 @@ const home = (props) => {
                         id={recipe.id}
                         description={recipe.description} />
                 ))} 
+            </div>
+            <div className="container">
                 {recipes2.map((recipe) => (
                     <CardSm 
                         key={recipe.id}

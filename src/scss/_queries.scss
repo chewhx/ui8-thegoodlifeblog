@@ -1,0 +1,12 @@
+@use './config';
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: $tablet-breakpoint)
+        { @content };
+    }
+    @if $breakpoint == phone {
+        @media only screen and (max-width: $phone-breakpoint)
+        { @content };
+    }
+};

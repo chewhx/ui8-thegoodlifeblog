@@ -1,11 +1,13 @@
-@use '../textstyle';
-
 #nav {
     position: sticky;
     top: 0;
     padding: 48px 0px;
     background-color: #fff;
     opacity: 0.95;
+
+    @include responsive(phone) {
+        padding: 20px 0;
+    }
 
 }
 
@@ -15,17 +17,84 @@ nav {
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
-
+    transition: 1s ease-in-out;
+    
     ul {
         list-style: none;
+        display: flex;
+        flex-wrap: wrap;
         padding: 0;
         margin: 0;
         @include navigation;
 
         li {
-            margin: auto;
             display: inline-block;
             margin: auto 30px;
+
+            &:nth-child(n+2):nth-child(-n+3){
+                order: 1;
+            }
         }
     }
+
+    @include responsive(phone) {
+
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+
+        ul {
+            li {
+                width: 100%;
+                margin: 10px;
+                font-size: 20px;
+
+                &:nth-child(n+2):nth-child(-n+3){
+                    order: 0;
+                    display: none;
+                }
+
+                &:nth-child(n+4):nth-child(-n+5){
+                    order: 0;
+                    display: none;
+                }
+    
+            }
+
+            .nav-links {
+                position: absolute;
+                text-align: center;
+                width: 28%;
+                top: 80%;
+                right: 10%;
+                background-color: yellow;
+                height: 0px;
+                overflow: hidden;
+            }
+
+        }     
+    }
+}
+
+.nav-burger {
+    display: none;
+    z-index: 100;
+
+    @include responsive(phone) {
+        position: fixed;
+        right: 10%;
+        top: 5%;
+        display: block;
+        transition: display 1s ease-in-out;
+    }
+}
+
+.collapse {
+    height: 0px;
+    overflow: hidden;
+}
+
+.show {
+    height: auto;
+    transition: height .35s ease;
 }

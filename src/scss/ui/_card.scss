@@ -1,15 +1,23 @@
-@use '../textstyle';
+$card-lg-height: 874px;
+$card-lg-width: 633px;
+$card-md-height: 732px;
+$card-md-width: 460px;
+$card-sm-height: 627px;
+$card-sm-width: 286px;
+
 
 .card {
     width: 100%;
     display: grid;
     justify-content: center;
     margin: 0 30px;
+    margin-bottom: 56px;
 
     &-title {
         @include title-text;
         margin: 0 auto;
         text-align: center;
+        overflow: hidden;
     }
 
     &-image {
@@ -36,8 +44,8 @@
 
 
 .card-lg {
-    height: 874px;
-    max-width: 633px;
+    height: $card-lg-height;
+    max-width: $card-lg-width;
 
     .card-title {
         width: 100%;
@@ -49,8 +57,8 @@
 }
 
 .card-md {
-    height: 732px;
-    width: 460px;
+    height: $card-md-height;
+    width: $card-md-width;
 
     .card-title {
         width: 70%;
@@ -59,11 +67,14 @@
     .card-image {
         height: 460px;
     }
+
+
 }
 
 .card-sm {
-    height: 627px;
-    width: 286px;
+    height: $card-sm-height;
+    width: $card-sm-width;
+    grid-template-rows: 102px 286px 221px 18px;
 
     .card-title {
         width: 100%;
@@ -75,5 +86,37 @@
 
     .card-body {
         height: 165px;
+        align-self: start;
+        margin-top: 34px;
     }
+}
+
+.card-responsive {
+
+    @include responsive(tablet) {
+        height: $card-sm-height;
+        width: $card-sm-width;
+        grid-template-rows: 102px 286px 221px 18px;
+        margin-bottom: 56px;
+
+        .card-image {
+            height: $card-sm-width;
+        } 
+        
+        .card-body {
+            height: 165px;
+            align-self: start;
+            margin-top: 34px;
+        }
+    }
+
+    @include responsive(phone) {
+        height: $card-sm-height;
+        width: 100%;
+
+        .card-image {
+            height: $card-sm-width;
+        } 
+    }
+    
 }

@@ -55,8 +55,10 @@ const Post = (props) => {
                 Unfortunately. There are no real instructions here for preparing this delicious looking dish, because this is only a live mockup site. And for placeholding purposes, I'm going to insert Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
             <div className="post-footer">
+                <div className="wrapper">
                 {date} &nbsp; • &nbsp; 15 Comments
-
+                </div>
+                <div className="wrapper">    
                 <div className="social-icon">
                 <i className="fas fa-heart" onClick={()=> clickHandler()} ></i>
                 <span className="fab-text">
@@ -73,6 +75,7 @@ const Post = (props) => {
                 <i className="fab fa-twitter"></i>
                 <span className="fab-text">
                         TWEET</span>
+                </div>
                 </div>
             </div>
 

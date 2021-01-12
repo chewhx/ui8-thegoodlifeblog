@@ -39,7 +39,7 @@ export const CardLg = (props) => {
     }
 
     return (
-        <div className="card card-lg">
+        <div className="card card-lg card-responsive">
             <div>
             <img className="card-image" src={image} alt="food" />
             </div>
@@ -64,7 +64,7 @@ export const CardMd = (props) => {
     }
 
     return (
-        <div className="card card-md">
+        <div className="card card-md card-responsive">
             <div className="card-title">
             {props.title ? props.title : "Excepteur sint occaecat cupidatat non proident"}
             </div>
@@ -88,7 +88,7 @@ export const CardSm = (props) => {
     }
 
     return (
-        <div className="card card-sm">
+        <div className="card card-sm card-responsive">
             <div className="card-title">
             {props.title ? props.title : "Excepteur sint occaecat cupidatat non proident"}
             </div>

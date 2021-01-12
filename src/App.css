@@ -4,7 +4,7 @@ section {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-@use '../textstyle';
+@use './config';
 #nav {
   position: sticky;
   top: 0;
@@ -25,16 +25,25 @@ a {
   opacity: 0.95;
 }
 
+@media only screen and (max-width: 691px) {
+  #nav {
+    padding: 20px 0;
+  }
+}
+
 nav {
   width: 100%;
   max-width: 1240px;
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
+  transition: 1s ease-in-out;
 }
 
 nav ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   font-family: "Montserrat";
@@ -45,9 +54,68 @@ nav ul {
 }
 
 nav ul li {
-  margin: auto;
   display: inline-block;
   margin: auto 30px;
+}
+
+nav ul li:nth-child(n+2):nth-child(-n+3) {
+  order: 1;
+}
+
+@media only screen and (max-width: 691px) {
+  nav {
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 10px;
+    font-size: 20px;
+  }
+  nav ul li:nth-child(n+2):nth-child(-n+3) {
+    order: 0;
+    display: none;
+  }
+  nav ul li:nth-child(n+4):nth-child(-n+5) {
+    order: 0;
+    display: none;
+  }
+  nav ul .nav-links {
+    position: absolute;
+    text-align: center;
+    width: 28%;
+    top: 80%;
+    right: 10%;
+    background-color: yellow;
+    height: 0px;
+    overflow: hidden;
+  }
+}
+
+.nav-burger {
+  display: none;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 691px) {
+  .nav-burger {
+    position: fixed;
+    right: 10%;
+    top: 5%;
+    display: block;
+    transition: display 1s ease-in-out;
+  }
+}
+
+.collapse {
+  height: 0px;
+  overflow: hidden;
+}
+
+.show {
+  height: auto;
+  transition: height .35s ease;
 }
 
 footer {
@@ -85,7 +153,6 @@ footer .wrapper {
   justify-content: space-evenly;
 }
 
-@use '../textstyle';
 .post {
   display: grid;
   width: 100%;
@@ -145,12 +212,20 @@ footer .wrapper {
   color: #b7a698;
   line-height: 18px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.post-footer .wrapper {
+  display: flex;
+  width: 300px;
+  justify-content: flex-start;
 }
 
 .social-icon {
   width: fit-content;
   cursor: pointer;
+  margin: 0px 20px 0px 0px;
 }
 
 .social-icon .fa-heart:hover {
@@ -175,12 +250,12 @@ footer .wrapper {
   font-weight: 700;
 }
 
-@use '../textstyle';
 .card {
   width: 100%;
   display: grid;
   justify-content: center;
   margin: 0 30px;
+  margin-bottom: 56px;
 }
 
 .card-title {
@@ -190,6 +265,7 @@ footer .wrapper {
   color: #3b3d40;
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
 }
 
 .card-image {
@@ -250,6 +326,7 @@ footer .wrapper {
 .card-sm {
   height: 627px;
   width: 286px;
+  grid-template-rows: 102px 286px 221px 18px;
 }
 
 .card-sm .card-title {
@@ -262,6 +339,35 @@ footer .wrapper {
 
 .card-sm .card-body {
   height: 165px;
+  align-self: start;
+  margin-top: 34px;
+}
+
+@media only screen and (max-width: 1039px) {
+  .card-responsive {
+    height: 627px;
+    width: 286px;
+    grid-template-rows: 102px 286px 221px 18px;
+    margin-bottom: 56px;
+  }
+  .card-responsive .card-image {
+    height: 286px;
+  }
+  .card-responsive .card-body {
+    height: 165px;
+    align-self: start;
+    margin-top: 34px;
+  }
+}
+
+@media only screen and (max-width: 691px) {
+  .card-responsive {
+    height: 627px;
+    width: 100%;
+  }
+  .card-responsive .card-image {
+    height: 286px;
+  }
 }
 
 @use '../textstyle';
@@ -341,10 +447,9 @@ footer .wrapper {
   text-align: center;
   line-height: 140px;
   color: #fff;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
-  padding: 20px 0 100px;
 }
 
 @media (max-width: 987px) {
@@ -373,6 +478,15 @@ footer .wrapper {
   max-width: 633px;
 }
 
+@media only screen and (max-width: 691px) {
+  #post .post-image {
+    height: 311px;
+  }
+  #post .post {
+    width: 90%;
+  }
+}
+
 #about .container {
   width: 70%;
   display: grid;
@@ -383,7 +497,7 @@ footer .wrapper {
   grid-row: 1/2;
 }
 
-#home .container {
-  row-gap: 56px;
+#recipes .card-sm {
+  flex-basis: 1 1 286px;
 }
 /*# sourceMappingURL=App.css.map */

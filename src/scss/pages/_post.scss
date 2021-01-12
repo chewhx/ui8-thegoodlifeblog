@@ -19,4 +19,14 @@
 
     }
 
+    @include responsive(phone) {
+        .post-image {
+            height: 311px;
+        }
+        
+        .post {
+            width: 90%;
+        }
+    }
+
 }
